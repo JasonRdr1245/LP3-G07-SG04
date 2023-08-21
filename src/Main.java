@@ -7,16 +7,16 @@ public class Main {
         // Press Alt+Intro with your caret at the highlighted text to see how
         // IntelliJ IDEA suggests fixing it.
  
-        int vida,r p ;
-        bool e an fl=false;
+        int vida, rp ;
+        boolean fl=false;
         vida=0;  
         Scanner sc=new Scanner(System.in);
         do {
             vida++;    
-            Sy s tem.out.println("Vida:"+vida+"\t¿Cual es el numero secreto?");
-            rp =sc .n extInt();
-            if(rp= = 1234)
-                 fl=t r ue;
+            System.out.println("Vida:"+vida+"\t¿Cual es el numero secreto?");
+            rp =sc.nextInt();
+            if(rp == 1234)
+                 fl=true;
         
         }while  ( vida<3 && !fl);;
         if (fl==true)
@@ -25,4 +25,4 @@ public class Main {
             System.out.println("ups,perdiste");
     }
 }
-//dfhfdhfhfh
+// dfhfdhfhfh
