@@ -6,21 +6,23 @@ public class Main {
     public static void main(String[] args) {
         // Press Alt+Intro with your caret at the highlighted text to see how
         // IntelliJ IDEA suggests fixing it.
- 
-        int vida, rp ;
-        boolean fl=false;
-        vida=0;  
-        Scanner sc=new Scanner(System.in);
+
+        int vida, rp;
+        boolean fl = false;
+        vida = 0;
+        Scanner sc = new Scanner(System.in);
         do {
-            vida++;    
-            System.out.println("Vida:"+vida+"\t¿Cual es el numero secreto?");
-            rp =sc.nextInt();
-            if(rp == 1234)
-                 fl=true;
+            vida++;
+            System.out.println("Vida:" + vida + "\t¿Cual es el numero secreto?");
+            rp = sc.nextInt();
+            if (rp == 1234)
+                fl = true;
+
+        } while (vida < 3 && !fl);
         
-        }while  ( vida<3 && !fl);;
-        if (fl==true)
+        if (fl == true)
             System.out.println("Adivinaste");
+            System.out.println("¡Ganaste un cafe!"); //modificacion parte 6.
         else
             System.out.println("ups,perdiste");
     }
