@@ -1,0 +1,4 @@
+Apuntes clase
+s1.next(); //capturar valor de tipo String
+s1.nextInt(); //capturar valor de tipo Entero
+s1.nextDouble(); //capturar valor de tipo decimal
