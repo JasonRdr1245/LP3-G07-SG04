@@ -1,0 +1,57 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package ejerciciofigura;
+
+/**
+ *
+ * @author user
+ */
+public class Cubo extends FiguraTridimensional {
+
+    private double lado;
+
+    // -------------Constructor----------------------
+
+    public Cubo(String tipoFiguraTri, String tipoCuerpoTri, double lado) {
+        super(tipoFiguraTri, tipoCuerpoTri);
+        setLado(lado);
+    }
+    
+    // ----------------gets y sets ----------------------
+
+    public double getLado() {
+        return lado;
+    }
+
+    public void setLado(double lado) {
+        this.lado = lado;
+    }
+
+    // ------------- Método de implementacion de la interfaz -------------
+
+    @Override
+    public double areatotal() {
+        return 6 *(getLado()* getLado());
+    }
+
+    public double volumentotal() {
+        return (getLado()* getLado()* getLado());
+    }
+
+    // ------------- Metodo ToString -------------
+    @Override
+	public String toString() {
+		String s;
+		s = "\n" +
+				"--------------- Datos del " + this.tipoFiguraTri+" ---------------" + "\n" +
+				"Tipo de Cuerpo: " + this.tipoCuerpoTri + "\n" +
+				"Tipo de Figura: " + this.tipoFiguraTri + "\n" +
+				"Area: " + this.areatotal() + "\n"+
+                "Volumen: " + this.volumentotal() + "\n";
+		return s;
+	}
+
+}
