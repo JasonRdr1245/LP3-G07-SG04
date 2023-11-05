@@ -1,0 +1,169 @@
+//el programa se llama ComponentesBasicoDemo
+import javax.swing.*; 
+
+import java.awt.*; 
+
+import java.awt.event.*; 
+
+import javax.swing.event.ListSelectionEvent; 
+
+import javax.swing.event.ListSelectionListener; 
+
+  
+
+  
+
+public class ComponentesBasicosDemo { 
+
+  
+
+    public static void main(String[] args) { 
+
+        JFrame frame = new JFrame("Componentes Básicos - Franco y Jason"); 
+
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
+
+        frame.setLayout(new FlowLayout()); 
+
+  
+
+        // Botón de Comando 
+
+        JButton boton = new JButton("Botón de Comando"); 
+
+        boton.addActionListener(new ActionListener() { 
+
+            public void actionPerformed(ActionEvent e) { 
+
+                JOptionPane.showMessageDialog(frame, "Has presionado el Botón de Comando", "Franco y Jason", JOptionPane.INFORMATION_MESSAGE); 
+
+            } 
+
+        }); 
+
+        frame.add(boton); 
+
+  
+
+        // Casilla de Verificación 
+
+        JCheckBox casillaVerificacion = new JCheckBox("Casilla de Verificación"); 
+
+        casillaVerificacion.addItemListener(new ItemListener() { 
+
+            public void itemStateChanged(ItemEvent e) { 
+
+                if (casillaVerificacion.isSelected()) { 
+
+                    JOptionPane.showMessageDialog(frame, "Casilla de Verificación seleccionada", "Franco y Jason", JOptionPane.INFORMATION_MESSAGE); 
+
+                } 
+
+            } 
+
+        }); 
+
+        frame.add(casillaVerificacion); 
+
+  
+
+        // Botones de Opción 
+
+        JRadioButton botonOpcion1 = new JRadioButton("Opción 1"); 
+
+        JRadioButton botonOpcion2 = new JRadioButton("Opción 2"); 
+
+  
+
+        ButtonGroup grupoBotones = new ButtonGroup(); 
+
+        grupoBotones.add(botonOpcion1); 
+
+        grupoBotones.add(botonOpcion2); 
+
+  
+
+        botonOpcion1.addActionListener(new ActionListener() { 
+
+            public void actionPerformed(ActionEvent e) { 
+
+                JOptionPane.showMessageDialog(frame, "Opción 1 seleccionada", "Franco y Jason", JOptionPane.INFORMATION_MESSAGE); 
+
+            } 
+
+        }); 
+
+  
+
+        botonOpcion2.addActionListener(new ActionListener() { 
+
+            public void actionPerformed(ActionEvent e) { 
+
+                JOptionPane.showMessageDialog(frame, "Opción 2 seleccionada", "Franco y Jason", JOptionPane.INFORMATION_MESSAGE); 
+
+            } 
+
+        }); 
+
+  
+
+        frame.add(botonOpcion1); 
+
+        frame.add(botonOpcion2); 
+
+  
+
+        // Cuadro Combinado 
+
+        String[] opciones = {"Opción A", "Opción B", "Opción C"}; 
+
+        JComboBox<String> cuadroCombinado = new JComboBox<>(opciones); 
+
+        cuadroCombinado.addActionListener(new ActionListener() { 
+
+            public void actionPerformed(ActionEvent e) { 
+
+                String seleccion = (String) cuadroCombinado.getSelectedItem(); 
+
+                JOptionPane.showMessageDialog(frame, "Seleccionaste: " + seleccion, "Franco y Jason", JOptionPane.INFORMATION_MESSAGE); 
+
+            } 
+
+        }); 
+
+        frame.add(cuadroCombinado); 
+
+  
+
+        // Lista 
+
+        String[] elementosLista = {"Elemento 1", "Elemento 2", "Elemento 3"}; 
+
+        JList<String> lista = new JList<>(elementosLista); 
+
+        lista.setSelectionMode(ListSelectionModel.SINGLE_SELECTION); 
+
+        lista.addListSelectionListener(new ListSelectionListener() { 
+
+            public void valueChanged(ListSelectionEvent e) { 
+
+                String seleccion = lista.getSelectedValue(); 
+
+                JOptionPane.showMessageDialog(frame, "Seleccionaste: " + seleccion, "Franco y Jason", JOptionPane.INFORMATION_MESSAGE); 
+
+            } 
+
+        }); 
+
+        frame.add(lista); 
+
+  
+
+        frame.pack(); 
+
+        frame.setVisible(true); 
+
+    } 
+
+}
+
