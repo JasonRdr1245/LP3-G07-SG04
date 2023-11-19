@@ -40,11 +40,10 @@ public class Actividad2MG {
         Persona persona4 = new Persona("Ana", 28); 
        
         System.out.printf("El nombre mayor es: %s%n%n", maximo(persona1, persona2, persona3, persona4));
-        System.out.printf("El nombre mayor es: %s%n%n", maximo((persona1.getNombre()),(persona2.getNombre()),(persona3.getNombre()),(persona4.getNombre())));
+        System.out.printf("El nombre menor es: %s%n%n", minimo(persona1, persona2, persona3, persona4));
         System.out.printf("La edad menor es: %s%n%n", minimo((persona1.getEdad()),(persona2.getEdad()),(persona3.getEdad()),(persona4.getEdad())));
         System.out.printf("La edad mayor es: %s%n%n", maximo((persona1.getEdad()),(persona2.getEdad()),(persona3.getEdad()),(persona4.getEdad())));
       
        
     }
     }
-       
