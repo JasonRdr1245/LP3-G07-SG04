@@ -11,12 +11,13 @@ public class Actividad1MG {
         Float[] floatArray = {7.7f, 4.4f, 9.9f, 11f};
         Boolean[] booleanArray = {false, true, false, true};
         
-        //Arreglo objeto persona
-        Persona[] personasArray = {
-                new Persona("Juan", 25),
-                new Persona("María", 30),
-                new Persona("Carlos", 22)
-        };
+        // Crear un arreglo de objetos Persona
+        Persona[] personas = new Persona[3];
+
+        // Inicializar cada elemento del arreglo con objetos Persona
+        personas[0] = new Persona("Juan", 25);
+        personas[1] = new Persona("María", 30);
+        personas[2] = new Persona("Carlos", 22);
         
         //Imprimir con métodos genericos
         System.out.printf("Array integerArray contiene:%n");
@@ -35,7 +36,7 @@ public class Actividad1MG {
         imprimirArray(booleanArray);
 
         System.out.printf("%nArray personasArray contiene:%n");
-        imprimirArray(personasArray);
+        imprimirArray(personas);
     }
     /* Metodo Geneico que no imprime objetos
     public static <T> void imprimirArray(T[] inputArray) {
@@ -53,3 +54,5 @@ public class Actividad1MG {
     }
     
 }
+
+
